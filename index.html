@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liftora Support and Privacy</title>
+</head>
+<body>
+<style>
+  /* Layout: one reading column and a quiet sticky section nav. */
+  :root {
+    --bg: #F5F6F3;
+    --fg: #1B1F1C;
+    --muted: #5B635E;
+    --rule: #D9DDD6;
+    --accent: #2F6B4A;
+    --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141715; --fg: #E6E9E4; --muted: #9AA39C; --rule: #2C322E; --accent: #7FC69A;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141715; --fg: #E6E9E4; --muted: #9AA39C; --rule: #2C322E; --accent: #7FC69A;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+    padding-block: 0 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 42rem; margin: 0 auto; }
+  header.top { padding: 28px 0 18px; border-bottom: 1px solid var(--rule); }
+  .eyebrow { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 6vw, 40px); line-height: 1.05; margin: 8px 0 10px; text-wrap: balance; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0; }
+  nav.sections { position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); border-bottom: 1px solid var(--rule); z-index: 5; }
+  nav.sections ul { list-style: none; margin: 0; padding: 10px 0; display: flex; gap: 18px; flex-wrap: wrap; font-family: var(--font-display); font-size: 14px; font-weight: 700; }
+  nav.sections a { color: var(--accent); text-decoration: none; }
+  nav.sections a:hover, nav.sections a:focus-visible { text-decoration: underline; outline: none; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  main section { padding: 32px 0 8px; border-bottom: 1px solid var(--rule); }
+  h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.1; margin: 0 0 6px; letter-spacing: -0.01em; text-wrap: balance; }
+  h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin: 26px 0 6px; letter-spacing: 0.01em; }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 0 0 16px; }
+  .tablewrap { overflow-x: auto; margin: 0 0 16px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule); }
+  th { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  td.k { font-weight: 600; width: 34%; }
+  .contact { font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+  footer { padding-top: 24px; color: var(--muted); font-size: 14px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Liftora · Support, privacy and terms</div>
+  <h1>How Liftora handles your data, and how to reach us</h1>
+  <p class="lede">Liftora is a small workout-tracking app in beta testing. This page is the whole story: who runs it, what it stores, who can see it, how long it is kept, and how to delete it.</p>
+</header>
+
+<nav class="sections" aria-label="Sections"><ul>
+  <li><a href="#support">Support</a></li>
+  <li><a href="#privacy">Privacy notice</a></li>
+  <li><a href="#terms">Terms of use</a></li>
+  <li><a href="#changes">Changes</a></li>
+</ul></nav>
+
+<main>
+
+<section id="support">
+  <h2>Support</h2>
+  <p>Liftora is run by Lars Sarmiento, Oslo, Norway.</p>
+  <p class="contact">Email: <a href="mailto:larssarmiento@gmail.com">larssarmiento@gmail.com</a></p>
+  <p>Write to that address for anything: a bug, a question about your data, a request to delete something, or to report a person or a post. The operator promises to read and act on reports of abuse within 24 hours. Everything else gets an answer within a few days.</p>
+
+  <h3>How to delete your account</h3>
+  <p>In the app: <strong>Profile → Settings → Delete account</strong>, then enter your password to confirm. This removes everything about you from Liftora in one step (see <a href="#deleting">Deleting</a> below). You do not need to email us, but you can if the app is not working for you, and we will delete the account by hand.</p>
+
+  <h3>How to report someone or something</h3>
+  <p>On a post or a profile, tap <strong>…</strong> and choose <strong>Report post</strong> or <strong>Report account</strong>; on a comment, press and hold it and choose <strong>Report comment</strong>. Then pick a reason. You can also block an account from its profile; blocked accounts cannot follow you or see your workouts, and the app never tells them. If the app's own buttons are not enough, email us with a description of what you saw and, if you have it, the person's friend code or display name.</p>
+
+  <h3>Testing through TestFlight</h3>
+  <p>During the beta you install Liftora through Apple's TestFlight. Apple collects crash logs and usage information from TestFlight testers and shares them with us; if you were invited by email, that includes your name and email address. We use this only to fix the app. Apple's own description of what TestFlight shares is at <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">apple.com/legal/privacy/data/en/test-flight</a>. To see or delete the TestFlight data we hold about you, email us.</p>
+</section>
+
+<section id="privacy">
+  <h2>Privacy notice</h2>
+  <p class="meta">Effective 29 October 2026. Applies to the Liftora iOS app, beta version.</p>
+
+  <h3>Who runs Liftora</h3>
+  <p>Liftora is run by Lars Sarmiento (the "operator", "we"). Questions about your data: larssarmiento@gmail.com. The operator decides what Liftora stores and why; under European data-protection law that makes the operator the controller.</p>
+
+  <h3>What Liftora stores about you, and why</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Data</th><th>Why it is stored</th></tr>
+    <tr><td class="k">Your email address and a password hash</td><td>To sign you in. The password itself is never stored.</td></tr>
+    <tr><td class="k">Your first and last name as you typed them at sign-up</td><td>Kept by the sign-in service as typed, even if you change them later under Edit profile.</td></tr>
+    <tr><td class="k">For each sign-in: the time, the internet address it came from, and a description of your device</td><td>Kept by the sign-in service to run and secure sign-ins.</td></tr>
+    <tr><td class="k">First name, last name, the public display name the app derives from them (your first name and last initial), short text, profile picture, weight unit, the lifts you chose for your profile, the date you joined</td><td>To show your profile and format your numbers.</td></tr>
+    <tr><td class="k">The date you last reset your progress in a workout category</td><td>To count your completed workouts from that date.</td></tr>
+    <tr><td class="k">Every workout you save: title, start and finish time, exercises, each set's weight and reps, personal-record flags, notes you add to an exercise, and the gym you tagged</td><td>This is the app: your workout history.</td></tr>
+    <tr><td class="k">Posts you publish to the feed: the workout's title, the gym name, its duration and total volume, whether it set a personal record, and the time; and for each exercise its name, the number of completed sets, the top weight (in your unit and in kilograms) with the reps done at it, and whether that exercise set a personal record</td><td>Your feed, and the feed of the people who follow you; see "Who can see what".</td></tr>
+    <tr><td class="k">A photo you choose to add to a workout, one per workout, shrunk on your phone before it is sent; Liftora never receives the original</td><td>To show it on that post, next to the workout's summary.</td></tr>
+    <tr><td class="k">Templates you create or change, and favourites</td><td>To start a workout quickly.</td></tr>
+    <tr><td class="k">When another member copies one of your workouts with Copy split: their copy keeps the workout's title, its exercises in order, the set counts, and the name you had at that time</td><td>It is their template, which only they can see. The name is kept as text, so their copy still says whose workout it was after you change your name.</td></tr>
+    <tr><td class="k">Gyms you add, stored with a position rounded to three decimal places (about 100 metres)</td><td>So the gym can be suggested to you again. The exact position is not kept.</td></tr>
+    <tr><td class="k">Your Approve followers setting</td><td>To decide whether someone who wants to follow you needs your approval first. It is on your public profile card, so other people see whether to tap Follow or Request.</td></tr>
+    <tr><td class="k">A short friend code the server makes for you when your profile is created</td><td>So people can be sure they found the right person. It never changes.</td></tr>
+    <tr><td class="k">Follow requests and follows: who asked to follow whom, whether the request is waiting or accepted, when it was sent and accepted, and whether it was accepted at once because Approve followers was off</td><td>To show your followers, the people you follow and your friends (people who follow each other), and to decide who sees your posts.</td></tr>
+    <tr><td class="k">Accounts you blocked, and when</td><td>To keep the two of you apart in the app.</td></tr>
+    <tr><td class="k">Heias (likes) you give: which post, and when</td><td>To show them on the post and to tell the post's owner.</td></tr>
+    <tr><td class="k">Comments you write: the text (up to 500 characters), which post, and when</td><td>To show them under the post and to tell the post's owner.</td></tr>
+    <tr><td class="k">Reports you file, and reports others file about your posts, comments or account: what was reported, whose it is, the reason picked, any details typed, a copy of what was reported as the reporter could see it at that moment (a post's title, gym, summary numbers, exercises and time, and where its photo is stored; a comment's text; or an account's display name and short text, and where its picture is stored), whether the report is open, actioned or dismissed, and when it was filed</td><td>So the operator can act on it, even if the reported content is deleted afterwards, and can look at a reported photo or picture.</td></tr>
+    <tr><td class="k">A log of your recent attempts to send a follow request, a comment or a report: only the kind and the time</td><td>To limit how many you can send in a short time. Each entry is deleted within two days.</td></tr>
+    <tr><td class="k">The time up to which you have seen your notifications</td><td>To mark which notifications are new. The notifications themselves are not stored: they are worked out from follows, heias and comments when you open them.</td></tr>
+  </table></div>
+  <p>Liftora stores nothing else about you. There are no analytics, no advertising identifiers, no tracking across other apps or websites.</p>
+
+  <h3>Where it is stored</h3>
+  <p>With Supabase, on servers in Stockholm, Sweden (EU). Supabase Pte. Ltd. (Singapore) runs the service for us as a processor under its data-processing addendum, hosted on Amazon Web Services. Supabase keeps its service logs in EU data centres. Two things can leave the EU: your profile picture and workout photos may pass through Supabase's content delivery network when they are shown, and Supabase support staff in Singapore or the United States may access the service under the EU's standard contractual clauses. Supabase's list of sub-processors is at <a href="https://supabase.com/legal/subprocessors">supabase.com/legal/subprocessors</a>.</p>
+
+  <h3>Who can see what</h3>
+  <div class="tablewrap"><table>
+    <tr><th>What</th><th>Who can see it</th></tr>
+    <tr><td class="k">Your profile card: display name, short text and Approve followers setting</td><td>Every signed-in Liftora user except accounts you blocked (see "What a block does"), so people can find you. Your first and last name in full: only you.</td></tr>
+    <tr><td class="k">Your profile picture</td><td>Any signed-in Liftora member, unless you blocked them, wherever your name is shown: the feed, your profile, Find people, comments and notifications.</td></tr>
+    <tr><td class="k">Your friend code</td><td>Every signed-in Liftora user except an account you blocked or that blocked you.</td></tr>
+    <tr><td class="k">Your weight unit, the lifts you chose for your profile, and the date you joined</td><td>Only you.</td></tr>
+    <tr><td class="k">Your email address, password hash and sign-in history</td><td>No other Liftora user can see them. The operator can, through the sign-in service.</td></tr>
+    <tr><td class="k">Posts you publish to the feed, with the gym name, the time, and the photo if you added one</td><td>You and the people who follow you, unless one of you blocked the other. Everyone who can see a post can read everything it holds, including each exercise's completed sets, top weight and personal-record flag. A workout photo is shown to exactly the people who can see that post. While Approve followers is on (the default), a follow starts only when you accept the request; while it is off, anyone with a Liftora account and a name can follow you at once. A follower sees all your posts, including earlier ones. Someone you remove or block stops seeing your posts and the photos on them the next time their app asks for them, and someone you block also stops seeing your profile picture; a copy their phone already downloaded may stay there for a while, as with any photo shown on a phone.</td></tr>
+    <tr><td class="k">Heias and comments</td><td>The person who gave or wrote them, and everyone who can see the post, except people in a block with the person who gave or wrote them. The post's owner can also delete any comment on it.</td></tr>
+    <tr><td class="k">Follow requests and follows</td><td>Only the two people involved. Your followers, the people you follow and your friends, and how many of each, are shown only to you; nobody can see another person's lists.</td></tr>
+    <tr><td class="k">Notifications</td><td>Only you. You see when someone asks to follow you, accepts your request or starts following you, and when someone else gives a heia to or comments on one of your posts (with the first 80 characters of the comment). Nothing from an account in a block with you.</td></tr>
+    <tr><td class="k">Blocks</td><td>You and the account you blocked. The app never tells them: to them your profile reads "This account isn't available", as a deleted account does. You still see their name in Blocked accounts.</td></tr>
+    <tr><td class="k">What a block does</td><td>Neither of you sees the other's posts, photos, heias, comments, profile picture or friend code anywhere in the app, and neither can follow the other or send a request. The account you blocked can no longer see your profile card, unless it has blocked you too. Follows and requests between you are deleted, and so are the heias and comments each of you left on the other's posts. Unblocking brings none of it back.</td></tr>
+    <tr><td class="k">Reports</td><td>Only the operator. You can read back only which posts, comments and accounts you reported, so the app can hide them for you; never the reason, details or copy. The person reported cannot see the report.</td></tr>
+    <tr><td class="k">Hidden content</td><td>A post or comment you report is hidden from you, and only from you, as soon as you send the report. It stays hidden for as long as your report is kept; when a closed report is deleted (see <a href="#deleting">How long data is kept</a>), the post or comment can show for you again.</td></tr>
+    <tr><td class="k">Filtered content</td><td>Names, short text and comments are checked against a list of words the operator keeps. A comment, or a change to a name or short text, that contains one is refused; at sign-up such a name is left empty. Text that looks like a friend code is not allowed in a name, and in a short text only if it is your own code. Invisible text-direction marks and zero-width spaces are removed from names and short text. Nobody but the operator can read the word list.</td></tr>
+    <tr><td class="k">The attempt log and the word list</td><td>Nobody but the operator.</td></tr>
+    <tr><td class="k">Your workout history, templates, favourites, exercise notes, progress resets and best lifts</td><td>Only you, apart from the summary and the photo of a workout you post to the feed.</td></tr>
+    <tr><td class="k">Gyms you added</td><td>Only you. The gym's name, never its position, is copied into each post you tag it in, so everyone who can see that post sees the name.</td></tr>
+  </table></div>
+  <p>The operator can access the database directly to run and repair the service and to act on reports. The operator also uses an AI assistant, Claude, provided by Anthropic Ireland, Limited, with read-only access to the database, to check the service. It reads only counts and the database's structure, never testers' rows. What it reads is handled by Anthropic under its own privacy policy (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>). Apart from Supabase and that assistant, the operator promises to give no one else access. Supabase's own access is described under "Where it is stored" above.</p>
+
+  <h3>Other services</h3>
+  <ul>
+    <li><strong>Supabase</strong>, for everything above.</li>
+    <li><strong>OpenStreetMap</strong> (tile.openstreetmap.org), only when a post shows a map: it receives the map square being drawn and your phone's internet address, not your name or account. Gym data in Liftora comes from OpenStreetMap contributors.</li>
+    <li><strong>Apple</strong>, through TestFlight during the beta (see <a href="#support">Support</a>).</li>
+    <li><strong>Anthropic</strong> (Claude), used by the operator, not by the app: the operator's AI assistant, which reads only counts and the database's structure, never testers' rows.</li>
+    <li><strong>Google</strong> (Gmail), the operator's support email: what you write to larssarmiento@gmail.com, and what the operator writes to you from that address, including any notice that these terms are changing, is held by Google.</li>
+    <li><strong>This page</strong> is hosted on GitHub Pages (GitHub, Inc.), which logs visitors' internet addresses for security. It sets no cookies and runs no scripts.</li>
+  </ul>
+  <p>Nothing else: no analytics service, no advertising network, no over-the-air update service.</p>
+
+  <h3>Location, camera and photos</h3>
+  <p>Liftora reads your location only when you tap the gym field after a workout, to suggest gyms near you. Your position is sent to Supabase at full precision for that search and is not stored, unless you add a new gym, in which case it is stored rounded to three decimal places as the gym's position. The camera opens when you set a profile picture, add a photo to a workout or scan a friend's code; the photo picker opens only when you set a profile picture or add a photo to a workout. Liftora receives only the picture you take or choose, never the rest of your photo library. A scanned code is sent to Supabase only to find that person, exactly as a typed code is. It is not saved in Liftora's database; like every request, it can appear for a short time in Supabase's service logs (see <a href="#deleting">How long data is kept</a>). No background location, no motion tracking, no contacts, no microphone.</p>
+
+  <h3>On your phone</h3>
+  <p>Your sign-in token, cached copies of the pictures and photos shown to you, your theme choice, your weight unit, a workout in progress, a note left when the app saves or discards a workout you left open (whether it was saved or discarded, when you last worked on it, which workout if it was saved and whether it was already posted, and your account's id), and a cached exercise list.</p>
+
+  <h3 id="deleting">How long data is kept, and how to delete it</h3>
+  <p>Everything above is kept for as long as your account exists, except that attempt-log entries are deleted within two days, and a photo or picture you remove or replace is deleted at once; if that fails, the app deletes it later, on a later day when you next use Liftora. The operator promises to delete closed reports by hand once a month, once they were filed more than 90 days earlier; until then the database keeps them. <strong>Delete account</strong> in Settings (enter your password to confirm) removes it all in one step: your workouts, posts and the photos on them, templates, favourites, exercise notes, the gyms you added, your picture, and your login. It also removes your profile card, your follow requests and follows in both directions, blocks you made and blocks others made of you, the heias and comments you gave and the ones others left on your posts, the reports you filed and the reports others filed about you, your attempt log, and your notification record. The picture and photo cache, your saved unit and the note about a workout the app closed for you are cleared on the phone you delete from; your theme choice and the cached exercise list are not about you and stay. You can also email us to have the account deleted.</p>
+  <p>Five things Delete account does not reach:</p>
+  <ul>
+    <li><strong>Supabase's service logs</strong>, which record your email address, your phone's internet address, a rough location derived from that address, a description of your device, and when you signed in and used the app. They can also hold the address of each request, which can include a name or friend code you searched. On our current plan Supabase keeps most of these for one day and the sign-in audit log for one hour.</li>
+    <li><strong>Backups.</strong> Liftora keeps no backups of its own; data you delete is gone at once and cannot be recovered by us either.</li>
+    <li><strong>Your friend code</strong> is retired, not deleted: it stays in the database linked to no account, nobody can look it up, and it is never given to anyone else.</li>
+    <li><strong>Copies of your workouts</strong> that other members made with Copy split: their template keeps the workout's title, exercises, set counts and the name you had at that time, as text, with no link to your account.</li>
+    <li><strong>Email you sent us.</strong> What you wrote to larssarmiento@gmail.com, and our replies, stay in the operator's Gmail account until the operator deletes them. The operator deletes a conversation once the matter is closed, or at once if you ask.</li>
+  </ul>
+
+  <h3>Your rights</h3>
+  <p>You can see your data in the app, change it under Edit profile, and delete it with Delete account. For a copy of your data in a file, a correction we cannot make in the app, or any question, email larssarmiento@gmail.com. If you are in the EU or EEA you also have the right to complain to your data-protection authority.</p>
+</section>
+
+<section id="terms">
+  <h2>Terms of use</h2>
+  <p class="meta">Effective 29 October 2026.</p>
+  <p>By creating a Liftora account you agree to these terms.</p>
+  <ol>
+    <li><strong>Who may use Liftora.</strong> You must be at least 13 years old.</li>
+    <li><strong>Beta software.</strong> Liftora is in testing. It may change, lose data, or stop working. Keep your own record of anything you cannot afford to lose.</li>
+    <li><strong>Your content.</strong> You own what you post. You give the operator permission to store it and show it to the people you have allowed to see it, so the app can work, and you allow those people to copy a workout's exercises and set counts from your post into their own templates with Copy split.</li>
+    <li><strong>No tolerance for objectionable content or abusive users.</strong> Do not post, send or use as a name anything that is hateful, harassing, threatening, sexually explicit, violent, illegal, or that targets another person. Do not impersonate anyone. The operator promises to review every report within 24 hours and will remove the content and may suspend or delete the account that posted it, without warning. Repeated or serious abuse ends your access to Liftora.</li>
+    <li><strong>Reporting and blocking.</strong> Use Report on any post, comment or account, or email larssarmiento@gmail.com. Blocking an account stops it from following you and from seeing your workouts, heias and comments.</li>
+    <li><strong>Your account.</strong> Keep your password to yourself. You can delete your account at any time in Settings.</li>
+    <li><strong>No warranty.</strong> Liftora is provided as is. The operator is not responsible for injuries from exercise you choose to do, or for lost data, to the extent the law allows.</li>
+    <li><strong>Changes.</strong> If these terms change in a way that matters, the Changes section below says so and the operator emails every account before the change applies.</li>
+    <li><strong>Law.</strong> These terms are governed by the law of Norway.</li>
+  </ol>
+</section>
+
+<section id="changes">
+  <h2>Changes to this page</h2>
+  <p>This page is updated whenever Liftora stores something new or shows it to someone new.</p>
+  <p class="meta">Version history: 21 October 2026 — first version, for the first TestFlight build. 22 October 2026 — following, blocking, reporting and notifications added to what Liftora stores, who can see what, and deleting. 23 October 2026 — what a post holds and who can read it, who can see your sign-in data, and the operator's promises on reports and access, worded as promises (privacy notice and terms item 4); the operator's AI assistant, Claude by Anthropic, which reads only counts and the database's structure, never testers' rows; and the note about a closed workout on your phone. 23 October 2026 — the camera: Liftora also opens it to scan a friend's code in Find people; a scanned code is sent only to find that person, as a typed code is, and is not saved in Liftora's database. 24 October 2026 — the contact address is now larssarmiento@gmail.com, in Support, the privacy notice and terms item 5; and Supabase's service logs can hold the address of each request, which can include a name or friend code you searched. 24 October 2026 — Google (Gmail), the operator's support email, added to other services. 29 October 2026 — workout photos: what a photo is, who can see it, the camera and photo picker, the photo cache on your phone, and that your photos go with your account; your profile picture is now shown wherever your name is; Copy split, in what Liftora stores, under Deleting and in terms item 3; Delete account is confirmed with your password instead of a typed word; email you sent us, under Deleting and in the Google entry.</p>
+</section>
+
+</main>
+<footer>
+  <p>Gym data © OpenStreetMap contributors. Liftora is not affiliated with Apple, Supabase or OpenStreetMap.</p>
+</footer>
+</div>
+
+</body>
+</html>
