@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vectra Earlier Version History</title>
+</head>
+<body>
+<style>
+  /* The same reading column and colours as the support page. */
+  :root {
+    --bg: #F5F6F3;
+    --fg: #1B1F1C;
+    --muted: #5B635E;
+    --rule: #D9DDD6;
+    --accent: #2F6B4A;
+    --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141715; --fg: #E6E9E4; --muted: #9AA39C; --rule: #2C322E; --accent: #7FC69A;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141715; --fg: #E6E9E4; --muted: #9AA39C; --rule: #2C322E; --accent: #7FC69A;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+    padding-block: 0 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 42rem; margin: 0 auto; }
+  header.top { padding: 28px 0 18px; border-bottom: 1px solid var(--rule); }
+  .eyebrow { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 6vw, 40px); line-height: 1.05; margin: 8px 0 10px; text-wrap: balance; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  main section { padding: 32px 0 8px; border-bottom: 1px solid var(--rule); }
+  h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.1; margin: 0 0 6px; letter-spacing: -0.01em; text-wrap: balance; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .meta { color: var(--muted); font-size: 15px; }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Vectra · Support, privacy and terms</div>
+  <h1>Earlier version history</h1>
+  <p class="lede">The changes made to Vectra's support, privacy and terms page from 21 October to 20 November 2026, as the page listed them then. Each entry says what changed on that day; the page itself says what is true now: <a href="index.html">Vectra Support and Privacy</a>.</p>
+</header>
+
+<main>
+<section id="history">
+  <h2>Version history, 21 October to 20 November 2026</h2>
+  <p class="meta">21 October 2026 — first version, for the first TestFlight build. 22 October 2026 — following, blocking, reporting and notifications added to what Liftora stores, who can see what, and deleting. 23 October 2026 — what a post holds and who can read it, who can see your sign-in data, and the operator's promises on reports and access, worded as promises (privacy notice and terms item 4); the operator's AI assistant, Claude by Anthropic, which reads only counts and the database's structure, never testers' rows; and the note about a closed workout on your phone. 23 October 2026 — the camera: Liftora also opens it to scan a friend's code in Find people; a scanned code is sent only to find that person, as a typed code is, and is not saved in Liftora's database. 24 October 2026 — the contact address is now larssarmiento@gmail.com, in Support, the privacy notice and terms item 5; and Supabase's service logs can hold the address of each request, which can include a name or friend code you searched. 24 October 2026 — Google (Gmail), the operator's support email, added to other services. 29 October 2026 — workout photos: what a photo is, who can see it, the camera and photo picker, the photo cache on your phone, and that your photos go with your account; your profile picture is now shown wherever your name is; Copy split, in what Liftora stores, under Deleting and in terms item 3; Delete account is confirmed with your password instead of a typed word; email you sent us, under Deleting and in the Google entry. 7 November 2026 — the app is now called Vectra (the app on your phone may still show its earlier name, Liftora); up to five photos per workout; OpenStreetMap is a source of gym data only, and its licence is named; when you finished setting up your profile, and when your records were created or last changed; exercise notes, one per exercise; the template a workout was started from; your previous top weight for each exercise in a post; on your phone, the order of your favourites and what your sign-in session holds; TestFlight and the App Store. 13 November 2026 — time and distance sets, and timed workouts (AMRAP and For time), in what a workout and a post store; a post's own title and note, in what a post stores, who can see it, the word filter, reports and Copy split; deleting a post: how, and what goes with it; the operator can look at a reported photo only while it is still stored; heias are now called fist bumps; Share as overlay: the pictures it makes, on your phone and in your photo library; on your phone, whether you dismissed the reps-in-reserve tip; what an account you blocked can read of your profile picture once it has blocked you too. A post's own title and note, deleting a post, the reps-in-reserve tip, Share as overlay and the name fist bump may not be in the app on your phone yet. 14 November 2026 — challenges and badges: what a badge stores, the second copy without a date that the people who can see your posts read, that a new badge is visible to them at once, a challenge attempt as a private workout, the badge on a post, that a badge is deleted only with your account, and what waits on your phone and what logging out and Delete account do with it; the word filter now also checks the text of a post's workout summary, and the page names its check of a post's gym name; a report keeps each exercise's sets, top weight with the reps done at it, best, personal-record flag and previous top weight; the workout's name on an overlay made after a workout is not checked; where else you can block an account, that your posts show your weight unit, what Delete account clears on your phone, and where you change your data. Challenges and badges may not be in the app on your phone yet. 17 November 2026 — Share as overlay without Save to Photos: Vectra adds an overlay to your photo library only through Save Image in the iPhone's share sheet, and the only overlay picture it keeps on your phone is Share's; RepDB, where the exercise pictures come from, in other services and at the foot of this page. The exercise pictures may not be in the app on your phone yet. Until the app on your phone is updated, it may still have Save to Photos in Share as overlay: it adds the overlay you picked to your photo library, which iOS asks your permission for, and deletes its own copy of the picture as soon as the save ends. 20 November 2026 — cardio interval workouts: what an interval workout and its post store, that a post shows the name of the plan you started it from, even one you saved yourself, what the word list does with that name and with the note, what a report keeps, and, on your phone, the workout in progress, the Sound and Vibration choices, the last machine and the Workouts tab you last opened; videos on posts: what Vectra stores, who can see a video, the photo picker, the videos cached on your phone, deleting, and updating Vectra before you delete a post or your account. Cardio intervals and videos on posts may not be in the app on your phone yet. 20 November 2026 — why Vectra is allowed to use your data: to run the app you signed up for, to keep Vectra working and secure and stop abuse, and your permission where iOS asks for it, with how to withdraw it, and what you must give to have an account; your rights, each with how to use it, and where to complain: Datatilsynet, the Norwegian Data Protection Authority, or the authority where you live; Supabase's Pro plan: its API and database logs and the sign-in audit log are kept for 7 days, and it keeps a daily backup of the database for 7 days, which the operator uses only to recover the service. 20 November 2026 — your display name is now your full first and last name. Every signed-in Vectra user except accounts you blocked sees it on your posts, comments and profile, and Find people finds you by any part of it. A name holds up to four names; first and last name up to 30 characters each. Copied workouts and reports keep the name as it was when they were made. Until you update the app, Edit profile may still say others see only your last initial.</p>
+</section>
+</main>
+</div>
+</body>
+</html>
